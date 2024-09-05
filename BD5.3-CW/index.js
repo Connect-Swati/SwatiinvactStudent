@@ -1,13 +1,16 @@
 let express = require("express");
-let app = express();
-let port = 3000;
+let cors = require("cors");
+const app = express();
+app.use(cors());
+
 // Import the Track model and Sequelize instance from the previously defined paths
 let track = require("./models/track.model");
 
 let { sequelize } = require("./lib/index");
 
+const port = 3000;
 app.listen(port, () => {
-  console.log("Server is running on port " + port);
+  console.log("Server is running on port" + port);
 });
 
 let trackData = [
