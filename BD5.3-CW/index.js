@@ -2,6 +2,7 @@ let express = require("express");
 let cors = require("cors");
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 // Import the Track model and Sequelize instance from the previously defined paths
 let track = require("./models/track.model");
@@ -235,11 +236,12 @@ async function addNewTrack(newTrack) {
 //endpoint to add a new track
 app.post("/tracks/new", async (req, res) => {
   try {
+    console.log("Request body:", req.body); // Check if the body is coming through
     let newTrack = req.body.newTrack;
     let result = await addNewTrack(newTrack);
     return res.status(200).json(result);
   } catch (error) {
-    if (error.message == "No tracks found") {
+    if (error.message === "No tracks found") {
       return res.status(404).json({
         code: 404,
         message: "No tracks found",
