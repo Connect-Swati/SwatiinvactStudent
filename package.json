@@ -2,7 +2,6 @@
   "name": "nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "BD5.3-CW/index.js",
   "scripts": {
     "start": "node BD5.3-CW/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +11,8 @@
     "express": "^4.19.2",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
