@@ -2,10 +2,8 @@ let sq = require("sequelize"); /*Imports the sequelize package, which is an Obje
  */
 let sequelize = new sq.Sequelize({
   dialect: "sqlite",
-  storage: __dirname + "/../BD5.3-CW/database.sqlite", // Use __dirname for correct file path resolution
+  storage: "./BD5.3-CW/database.sqlite", // Ensure this path is correct
 });
-
-
 
 /*
 Creates an instance of Sequelize configured to use a SQLite database.
