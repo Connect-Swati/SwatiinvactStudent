@@ -2,7 +2,7 @@ let sq = require("sequelize"); /*Imports the sequelize package, which is an Obje
  */
 let sequelize = new sq.Sequelize({
   dialect: "sqlite",
-  storage: "./database.sqlite",
+  storage: "./BD5.3-CW/database.sqlite",
 });
 
 /*
